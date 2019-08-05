@@ -199,7 +199,7 @@ class AtPage extends Handler {
 				this.orientation = orientation;
 
 				this.addRootVars(ast, width, height, orientation, bleed, bleedrecto, bleedverso, marks);
-				this.addRootPage(ast, this.pages["*"].size, bleed);
+				this.addRootPage(ast, this.pages["*"].size, bleed, bleedrecto, bleedverso);
 
 				this.emit("size", { width, height, orientation, format, bleed });
 				this.emit("atpages", this.pages);
@@ -796,11 +796,11 @@ class AtPage extends Handler {
 			let pageHeightVar = this.createVariable("--pagedjs-height", CSSValueToString(height));
 
 			rules.push(
-				bleedTop, 
-				bleedRight, 
-				bleedBottom, 
-				bleedLeft, 
-				bleedTopRecto, 
+				bleedTop,
+				bleedRight,
+				bleedBottom,
+				bleedLeft,
+				bleedTopRecto,
 				bleedRightRecto,
 				bleedBottomRecto,
 				bleedLeftRecto,
@@ -808,7 +808,7 @@ class AtPage extends Handler {
 				bleedRightVerso,
 				bleedBottomVerso,
 				bleedLeftVerso,
-				pageWidthVar, 
+				pageWidthVar,
 				pageHeightVar
 			);
 		}
@@ -856,10 +856,14 @@ class AtPage extends Handler {
 		padding: 0;
 	}
 	*/
-	addRootPage(ast, size, bleed) {
+	addRootPage(ast, size, bleed, bleedrecto, bleedverso) {
 		let { width, height, orientation, format } = size;
 		let children = new csstree.List();
+		let childrenLeft = new csstree.List();
+		let childrenRight = new csstree.List();
 		let dimensions = new csstree.List();
+		let dimensionsLeft = new csstree.List();
+		let dimensionsRight = new csstree.List();
 
 		if (bleed) {
 			let widthCalculations = new csstree.List();
@@ -1054,7 +1058,6 @@ class AtPage extends Handler {
 			}
 		});
 
-
 		let rule = ast.children.createItem({
 			type: "Atrule",
 			prelude: null,
@@ -1067,6 +1070,294 @@ class AtPage extends Handler {
 		});
 
 		ast.children.append(rule);
+
+		if (bleedverso) {
+			let widthCalculationsLeft = new csstree.List();
+			let heightCalculationsLeft = new csstree.List();
+
+			// width
+			widthCalculationsLeft.appendData({
+				type: "Dimension",
+				unit: width.unit,
+				value: width.value
+			});
+
+			widthCalculationsLeft.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			widthCalculationsLeft.appendData({
+				type: "Operator",
+				value: "+"
+			});
+
+			widthCalculationsLeft.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			widthCalculationsLeft.appendData({
+				type: "Dimension",
+				unit: bleedverso.left.unit,
+				value: bleedverso.left.value
+			});
+
+			widthCalculationsLeft.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			widthCalculationsLeft.appendData({
+				type: "Operator",
+				value: "+"
+			});
+
+			widthCalculationsLeft.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			widthCalculationsLeft.appendData({
+				type: "Dimension",
+				unit: bleedverso.right.unit,
+				value: bleedverso.right.value
+			});
+
+			// height
+			heightCalculationsLeft.appendData({
+				type: "Dimension",
+				unit: height.unit,
+				value: height.value
+			});
+
+			heightCalculationsLeft.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			heightCalculationsLeft.appendData({
+				type: "Operator",
+				value: "+"
+			});
+
+			heightCalculationsLeft.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			heightCalculationsLeft.appendData({
+				type: "Dimension",
+				unit: bleedverso.top.unit,
+				value: bleedverso.top.value
+			});
+
+			heightCalculationsLeft.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			heightCalculationsLeft.appendData({
+				type: "Operator",
+				value: "+"
+			});
+
+			heightCalculationsLeft.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			heightCalculationsLeft.appendData({
+				type: "Dimension",
+				unit: bleedverso.bottom.unit,
+				value: bleedverso.bottom.value
+			});
+
+			dimensionsLeft.appendData({
+				type: "Function",
+				name: "calc",
+				children: widthCalculationsLeft
+			});
+
+			dimensionsLeft.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			dimensionsLeft.appendData({
+				type: "Function",
+				name: "calc",
+				children: heightCalculationsLeft
+			});
+
+			childrenLeft.appendData({
+				type: "Declaration",
+				property: "size",
+				loc: null,
+				value: {
+					type: "Value",
+					children: dimensionsLeft
+				}
+			});
+
+			let ruleLeft = ast.children.createItem({
+				type: "Atrule",
+				prelude: null,
+				name: "page :left",
+				block: {
+					type: "Block",
+					loc: null,
+					children: childrenLeft
+				}
+			});
+
+			ast.children.append(ruleLeft);
+
+		}
+
+		if (bleedrecto) {
+			let widthCalculationsRight = new csstree.List();
+			let heightCalculationsRight = new csstree.List();
+
+			// width
+			widthCalculationsRight.appendData({
+				type: "Dimension",
+				unit: width.unit,
+				value: width.value
+			});
+
+			widthCalculationsRight.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			widthCalculationsRight.appendData({
+				type: "Operator",
+				value: "+"
+			});
+
+			widthCalculationsRight.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			widthCalculationsRight.appendData({
+				type: "Dimension",
+				unit: bleedrecto.left.unit,
+				value: bleedrecto.left.value
+			});
+
+			widthCalculationsRight.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			widthCalculationsRight.appendData({
+				type: "Operator",
+				value: "+"
+			});
+
+			widthCalculationsRight.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			widthCalculationsRight.appendData({
+				type: "Dimension",
+				unit: bleedrecto.right.unit,
+				value: bleedrecto.right.value
+			});
+
+			// height
+			heightCalculationsRight.appendData({
+				type: "Dimension",
+				unit: height.unit,
+				value: height.value
+			});
+
+			heightCalculationsRight.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			heightCalculationsRight.appendData({
+				type: "Operator",
+				value: "+"
+			});
+
+			heightCalculationsRight.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			heightCalculationsRight.appendData({
+				type: "Dimension",
+				unit: bleedrecto.top.unit,
+				value: bleedrecto.top.value
+			});
+
+			heightCalculationsRight.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			heightCalculationsRight.appendData({
+				type: "Operator",
+				value: "+"
+			});
+
+			heightCalculationsRight.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			heightCalculationsRight.appendData({
+				type: "Dimension",
+				unit: bleedrecto.bottom.unit,
+				value: bleedrecto.bottom.value
+			});
+
+			dimensionsRight.appendData({
+				type: "Function",
+				name: "calc",
+				children: widthCalculationsRight
+			});
+
+			dimensionsRight.appendData({
+				type: "WhiteSpace",
+				value: " "
+			});
+
+			dimensionsRight.appendData({
+				type: "Function",
+				name: "calc",
+				children: heightCalculationsRight
+			});
+
+			childrenRight.appendData({
+				type: "Declaration",
+				property: "size",
+				loc: null,
+				value: {
+					type: "Value",
+					children: dimensionsRight
+				}
+			});
+
+			let ruleRight = ast.children.createItem({
+				type: "Atrule",
+				prelude: null,
+				name: "page :right",
+				block: {
+					type: "Block",
+					loc: null,
+					children: childrenRight
+				}
+			});
+
+			ast.children.append(ruleRight);
+
+		}
 	}
 
 	getNth(nth) {
