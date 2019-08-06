@@ -369,6 +369,18 @@ export default `
 	height: var(--pagedjs-height);
 }
 
+.pagedjs_page.pagedjs_right_page {
+	counter-increment: page;
+	width: var(--pagedjs-width-right);
+	height: var(--pagedjs-height-right);
+}
+
+.pagedjs_page.pagedjs_left_page {
+	counter-increment: page;
+	width: var(--pagedjs-width-left);
+	height: var(--pagedjs-height-left);
+}
+
 .pagedjs_pages {
 	counter-reset: pages var(--pagedjs-page-count);
 }
@@ -561,7 +573,7 @@ img {
 		max-height: 100%;
 	}
 	.pagedjs_pages {
-		width: var(--pagedjs-width);
+		width: auto;
 		display: block !important;
 		transform: none !important;
 		height: 100% !important;
