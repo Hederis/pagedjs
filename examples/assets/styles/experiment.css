@@ -1,0 +1,1096 @@
+@import url("https://use.typekit.net/csl0oqd.css");
+ @import url("https://use.typekit.net/exg7xea.css");
+ @import url("https://use.typekit.net/csl0oqd.css");
+ @import url("https://use.typekit.net/csl0oqd.css");
+
+ @font-face {
+   font-family: "FreeMono";
+   font-weight: normal;
+   font-style: normal;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeMono.otf");
+ }
+
+ @font-face {
+   font-family: "FreeMono";
+   font-weight: normal;
+   font-style: italic;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeMonoOblique.otf");
+ }
+
+ @font-face {
+   font-family: "FreeMono";
+   font-weight: bold;
+   font-style: normal;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeMonoBold.otf");
+ }
+
+ @font-face {
+   font-family: "FreeMono";
+   font-weight: bold;
+   font-style: italic;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeMonoBoldOblique.otf");
+ }
+
+ @font-face {
+   font-family: "FreeSans";
+   font-weight: normal;
+   font-style: normal;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeSans.otf");
+ }
+
+ @font-face {
+   font-family: "FreeSans";
+   font-weight: normal;
+   font-style: italic;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeSansOblique.otf");
+ }
+
+ @font-face {
+   font-family: "FreeSans";
+   font-weight: bold;
+   font-style: normal;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeSansBold.otf");
+ }
+
+ @font-face {
+   font-family: "FreeSans";
+   font-weight: bold;
+   font-style: italic;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeSansBoldOblique.otf");
+ }
+
+ @font-face {
+   font-family: "FreeSerif";
+   font-weight: normal;
+   font-style: normal;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeSerif.otf");
+ }
+
+ @font-face {
+   font-family: "FreeSerif";
+   font-weight: normal;
+   font-style: italic;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeSerifItalic.otf");
+ }
+
+ @font-face {
+   font-family: "FreeSerif";
+   font-weight: bold;
+   font-style: normal;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeSerifBold.otf");
+ }
+
+ @font-face {
+   font-family: "FreeSerif";
+   font-weight: bold;
+   font-style: italic;
+   src: url("https://s3-us-west-2.amazonaws.com/hederis-assets-extra/FreeSerifBoldItalic.otf");
+ }
+
+ /* Supports two levels of sub-sections */
+
+ @page {
+   size: 6in 9in;
+   padding: 19px 0in;
+   @top-left {
+     vertical-align: bottom;
+     font-family: 'minion-pro', 'FreeSerif', serif, 'FreeSerif';
+     font-size: 11px;
+     font-weight: normal;
+     font-style: normal;
+   }
+   @top-center {
+     vertical-align: bottom;
+     font-family: 'minion-pro', 'FreeSerif', serif, 'FreeSerif';
+     font-size: 11px;
+     font-weight: normal;
+     font-style: normal;
+   }
+   @top-right {
+     vertical-align: bottom;
+     font-family: 'minion-pro', 'FreeSerif', serif, 'FreeSerif';
+     font-size: 11px;
+     font-weight: normal;
+     font-style: normal;
+   }
+   @bottom-left {
+     vertical-align: bottom;
+     font-family: 'minion-pro', 'FreeSerif', serif, 'FreeSerif';
+     font-size: 11px;
+     font-weight: normal;
+     font-style: normal;
+   }
+   @bottom-center {
+     vertical-align: bottom;
+     font-family: 'minion-pro', 'FreeSerif', serif, "FreeSerif";
+     font-size: 11px;
+     font-weight: normal;
+     font-style: normal;
+   }
+   @bottom-right {
+     vertical-align: bottom;
+     font-family: 'minion-pro', 'FreeSerif', serif, "FreeSerif";
+     font-size: 11px;
+     font-weight: normal;
+     font-style: normal;
+   }
+ }
+
+ @page :first {
+   @top-left {
+     content: normal;
+   }
+   @top-center {
+     content: normal;
+   }
+   @top-right {
+     content: normal;
+   }
+ }
+
+ @page :left {
+   margin: 56pt 0.65in 0.5in 0.5in;
+   @top-center {
+     text-align: center;
+     content: string(booktitle)' | Test | 'counter(page);
+   }
+   @bottom-center {
+     text-align: center;
+     content: counter(page);
+   }
+ }
+
+ @page :right {
+   margin: 56pt 0.5in 0.5in 0.65in;
+   @top-center {
+     text-align: center;
+     content: string(authorname);
+   }
+   @bottom-center {
+     text-align: center;
+     content: counter(page);
+   }
+ }
+
+ @page :blank {
+   @top-left {
+     content: normal;
+   }
+   @top-center {
+     content: normal;
+   }
+   @top-right {
+     content: normal;
+   }
+   @bottom-left {
+     content: normal;
+   }
+   @bottom-center {
+     content: normal;
+   }
+   @bottom-right {
+     content: normal;
+   }
+ }
+
+ @page clear {
+   @top-left {
+     content: normal;
+   }
+   @top-center {
+     content: normal;
+   }
+   @top-right {
+     content: normal;
+   }
+   @bottom-left {
+     content: normal;
+   }
+   @bottom-center {
+     content: normal;
+   }
+   @bottom-right {
+     content: normal;
+   }
+ }
+
+ @page clear:first {
+   @top-left {
+     content: normal;
+   }
+   @top-center {
+     content: normal;
+   }
+   @top-right {
+     content: normal;
+   }
+   @bottom-left {
+     content: normal;
+   }
+   @bottom-center {
+     content: normal;
+   }
+   @bottom-right {
+     content: normal;
+   }
+ }
+
+ @page clear:blank {
+   @top-left {
+     content: normal;
+   }
+   @top-center {
+     content: normal;
+   }
+   @top-right {
+     content: normal;
+   }
+   @bottom-left {
+     content: normal;
+   }
+   @bottom-center {
+     content: normal;
+   }
+   @bottom-right {
+     content: normal;
+   }
+ }
+
+ @page frontmatter:first {
+   @top-left {
+     content: normal;
+   }
+   @top-center {
+     content: normal;
+   }
+   @top-right {
+     content: normal;
+   }
+ }
+
+ @page frontmatter:left {
+   @top-center {
+     content: string(booktitle)' | Test | 'counter(page, lower-roman);
+   }
+   @bottom-center {
+     content: counter(page, lower-roman);
+   }
+ }
+
+ @page frontmatter:right {
+   @top-center {
+     content: string(authorname);
+   }
+   @bottom-center {
+     content: counter(page, lower-roman);
+   }
+ }
+
+ @page frontmatter:blank {
+   @top-left {
+     content: normal;
+   }
+   @top-center {
+     content: normal;
+   }
+   @top-right {
+     content: normal;
+   }
+   @bottom-left {
+     content: normal;
+   }
+   @bottom-center {
+     content: normal;
+   }
+   @bottom-right {
+     content: normal;
+   }
+ }
+
+ * {
+   box-sizing: border-box;
+ }
+
+ body {
+   color: cmyk(0,0,0,100);
+   font-family: 'minion-pro', 'FreeSerif', serif, "FreeSerif";
+   font-size: 15px;
+   line-height: 19px;
+   background-repeat: repeat;
+   background-position: top left;
+   background-size: auto 19px;
+   counter-reset: page 1;
+ }
+
+ p {
+   text-align: justify;
+   text-align-last: left;
+   font-family: 'minion-pro', 'FreeSerif', serif, "FreeSerif";
+   font-size: 15px;
+   line-height: 19px;
+   margin: 0;
+   padding: 0;
+ }
+
+ a {
+   text-decoration: none;
+   color: cmyk(0,0,0,100);
+   font-style: italic;
+ }
+
+ section {
+   display: block;
+ }
+
+ /* GENERAL TEXT */
+
+ h1[data-hederis-type="hblkchaptitle"] {
+   padding: 0;
+   width: 100%;
+   string-set: chaptertitle content();
+ }
+
+ h1[data-hederis-type="hblkchaptitle"],
+ *[data-hederis-type="hblktitle"],
+ *[data-hederis-type="hblksubtitle"] {
+   font-family: 'myriad-pro', 'FreeSans', sans-serif, "FreeSerif";
+ }
+
+ p[data-hederis-type="hblkpa"],
+ p[data-hederis-type="hblkp"] {
+   margin: 0;
+   padding: 0;
+   text-indent: 19px;
+ }
+
+ p[data-hederis-type="hblksig"],
+ p[data-hederis-type="hblkdateline"] {
+   text-align: right;
+   margin-top: 19px;
+ }
+
+ p[data-hederis-type="hblksig"] + p[data-hederis-type="hblkdateline"],
+ p[data-hederis-type="hblkdateline"] + p[data-hederis-type="hblksig"] {
+   margin-top: 0;
+ }
+
+ p[data-hederis-type^="hblklinespace"] {
+   text-align: center;
+   height: 19px;
+   margin-top: 9.5px;
+   margin-bottom: 9.5px;
+ }
+
+ p[data-hederis-type^="hblklinespace"]:after {
+   display: inline;
+   text-align: center;
+   content: "* * *";
+ }
+
+ p[data-hederis-type^="hblklinespace"] + p {
+   text-indent: 0;
+ }
+
+ p[data-hederis-type="hblkseparator"] {
+   height: 19px;
+ }
+
+ /* SECTIONS */
+
+ section[data-type="chapter"],
+ section[data-type="halftitlepage"],
+ section[data-type="titlepage"],
+ section[data-type="copyright-page"],
+ section[data-type="dedication"],
+ section[data-type="epigraph"],
+ section[data-type="foreword"],
+ section[data-type="preface"],
+ nav[data-type="toc"],
+ section[data-type="introduction"],
+ div[data-type="part"],
+ section[data-type="interlude"],
+ section[data-type="appendix"],
+ section[data-type="colophon"],
+ section[data-type="acknowledgments"],
+ section[data-type="afterword"],
+ section[data-type="conclusion"],
+ section[data-type="glossary"],
+ section[data-type="bibliography"],
+ section[data-type="about-the-author"],
+ section[data-type="index"],
+ section[data-type="endnotes"] {
+   page-break-before: right;
+   prince-page-group: start;
+ }
+
+ section[data-type="chapter"] > h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="chapter"] > p[data-hederis-type="hblknumber"] {
+   prince-page-group: start;
+ }
+
+ section[data-type="chapter"] > p[data-hederis-type="hblknumber"] ~ h1[data-hederis-type="hblkchaptitle"] {
+   prince-page-group: auto;
+ }
+
+ section[data-type="halftitlepage"] + div[data-type="part"],
+ section[data-type="titlepage"] + div[data-type="part"],
+ section[data-type="copyright-page"] + div[data-type="part"],
+ section[data-type="dedication"] + div[data-type="part"],
+ section[data-type="epigraph"] + div[data-type="part"],
+ section[data-type="foreword"] + div[data-type="part"],
+ section[data-type="preface"] + div[data-type="part"],
+ nav[data-type="toc"] + div[data-type="part"],
+ section[data-type="halftitlepage"] + section[data-type="chapter"],
+ section[data-type="titlepage"] + section[data-type="chapter"],
+ section[data-type="copyright-page"] + section[data-type="chapter"],
+ section[data-type="dedication"] + section[data-type="chapter"],
+ section[data-type="epigraph"] + section[data-type="chapter"],
+ section[data-type="foreword"] + section[data-type="chapter"],
+ section[data-type="preface"] + section[data-type="chapter"],
+ nav[data-type="toc"] + section[data-type="chapter"],
+ section[data-type="halftitlepage"] + section[data-type="introduction"],
+ section[data-type="titlepage"] + section[data-type="introduction"],
+ section[data-type="copyright-page"] + section[data-type="introduction"],
+ section[data-type="dedication"] + section[data-type="introduction"],
+ section[data-type="epigraph"] + section[data-type="introduction"],
+ section[data-type="foreword"] + section[data-type="introduction"],
+ section[data-type="preface"] + section[data-type="introduction"],
+ nav[data-type="toc"] + section[data-type="introduction"],
+ section[data-type="halftitlepage"] + section[data-type="interlude"],
+ section[data-type="titlepage"] + section[data-type="interlude"],
+ section[data-type="copyright-page"] + section[data-type="interlude"],
+ section[data-type="dedication"] + section[data-type="interlude"],
+ section[data-type="epigraph"] + section[data-type="interlude"],
+ section[data-type="foreword"] + section[data-type="interlude"],
+ section[data-type="preface"] + section[data-type="interlude"],
+ nav[data-type="toc"] + section[data-type="interlude"] {
+   counter-reset: page 1;
+ }
+
+ /* SECTIONS */
+
+ section[data-type="halftitlepage"],
+ section[data-type="titlepage"],
+ section[data-type="copyright-page"],
+ section[data-type="dedication"],
+ section[data-type="epigraph"] {
+   page: clear;
+ }
+
+ section[data-type="foreword"],
+ section[data-type="preface"],
+ nav[data-type="toc"] {
+   page: frontmatter;
+ }
+
+ div[data-type="part"],
+ section[data-type="interlude"],
+ section[data-type="chapter"],
+ section[data-type="introduction"],
+ section[data-type="conclusion"] {
+   page: chapter;
+ }
+
+ section[data-type="appendix"],
+ section[data-type="colophon"],
+ section[data-type="acknowledgments"],
+ section[data-type="afterword"],
+ section[data-type="conclusion"],
+ section[data-type="glossary"],
+ section[data-type="bibliography"],
+ section[data-type="about-the-author"],
+ section[data-type="index"],
+ section[data-type="endnotes"] {
+   page: backmatter;
+ }
+
+ section[data-type="copyright-page"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="dedication"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="epigraph"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="foreword"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="preface"] h1[data-hederis-type="hblkchaptitle"],
+ nav[data-type="toc"] h1[data-hederis-type="hblkchaptitle"] {
+   text-align: center;
+   font-size: 32px;
+   font-style: normal;
+   line-height: 38px;
+   font-weight: bold;
+   margin-top: 76px;
+   margin-bottom: 76px;
+ }
+
+ section[data-type="appendix"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="colophon"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="acknowledgments"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="afterword"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="conclusion"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="glossary"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="bibliography"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="about-the-author"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="index"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="endnotes"] h1[data-hederis-type="hblkchaptitle"] {
+   text-align: center;
+   font-size: 32px;
+   font-style: normal;
+   line-height: 38px;
+   font-weight: bold;
+   margin-top: 76px;
+   margin-bottom: 76px;
+ }
+
+ section[data-type="halftitlepage"] h1[data-hederis-type="hblkchaptitle"] {
+   text-align: center;
+   font-size: 43px;
+   font-style: normal;
+   line-height: 120%;
+   font-weight: normal;
+   margin-top: 38px;
+   margin-bottom: 76px;
+ }
+
+ section[data-type="titlepage"] h1[data-hederis-type="hblkchaptitle"] {
+   text-align: center;
+   font-size: 43px;
+   font-style: normal;
+   line-height: 120%;
+   font-weight: bold;
+   margin-top: 38px;
+   margin-bottom: 76px;
+ }
+
+ section[data-type="titlepage"] p {
+   text-align: center;
+   font-size: 19px;
+   font-weight: normal;
+   font-style: normal;
+ }
+
+ section[data-type="titlepage"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="halftitlepage"] h1[data-hederis-type="hblkchaptitle"] {
+   string-set: booktitle content();
+ }
+
+ section[data-type="titlepage"] *[data-hederis-type="hblkau"],
+ section[data-type="halftitlepage"] *[data-hederis-type="hblkau"] {
+   string-set: authorname content();
+ }
+
+ section[data-type="titlepage"] p[data-hederis-type="hblkdateline"],
+ section[data-type="titlepage"] p[data-hederis-type="hblklocation"],
+ section[data-type="titlepage"] p[data-hederis-type="hblktitlepagepublisher"],
+ section[data-type="titlepage"] p[data-hederis-type="hblktitlepageimprint"] {
+   font-size: 12px;
+   margin-top: 0pt;
+   margin-bottom: 0pt;
+   float: bottom;
+ }
+
+ section[data-type="copyright-page"] {
+   text-align: center;
+ }
+
+ section[data-type="copyright-page"] p {
+   text-align: center;
+   text-indent: 0;
+ }
+
+ section[data-type="copyright-page"] p {
+   float: bottom;
+ }
+
+ section[data-type="dedication"] p {
+   text-align: center;
+   font-style: italic;
+ }
+
+ section[data-type="dedication"] p em {
+   font-style: normal;
+ }
+
+ nav[data-type="toc"] {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ nav[data-type="toc"] ol {
+   list-style-type: none
+ }
+
+ nav[data-type="toc"] p {
+   text-align: left;
+   text-align-last: left;
+ }
+
+ nav[data-type="toc"] a {
+   color: cmyk(0,0,0,100);
+   text-decoration: none;
+   font-style: normal;
+ }
+
+ nav[data-type="toc"] {
+   min-width: 2in;
+ }
+
+ /*nav[data-type="toc"] a[href]::after {
+   content: leader(" .") " " target-counter(attr(href, url), page);
+   margin-right: -0.25in;
+ }*/
+
+ nav[data-type="toc"] a[href]::before {
+   content: target-counter(attr(href, url), page) " | ";
+ }
+
+ nav[data-type="toc"] li[data-hederis-type="hblktocFM"] a[href]::before {
+   content: target-counter(attr(href, url), page, lower-roman) " | ";
+ }
+
+ nav[data-type="toc"] *[data-hederis-type="hblktocFM"] + *[data-hederis-type="hblktocPart"],
+ nav[data-type="toc"] *[data-hederis-type="hblktocFM"] + *[data-hederis-type="hblktocChap"],
+ nav[data-type="toc"] *[data-hederis-type="hblktocChap"] + *[data-hederis-type="hblktocBM"],
+ nav[data-type="toc"] *[data-hederis-type="hblktocPart"] + *[data-hederis-type="hblktocBM"],
+ nav[data-type="toc"] *[data-hederis-type="hblktocChap"] + *[data-hederis-type="hblktocPart"] {
+   margin-top: 19px;
+ }
+
+ nav[data-type="toc"] *[data-hederis-type="hblktocPart"] {
+   font-weight: bold;
+ }
+
+ div[data-type="part"] > h1[data-hederis-type="hblkchaptitle"],
+ div[data-type="part"] > *[data-hederis-type="hblknumber"] {
+   text-align: center;
+   font-size: 43px;
+   font-weight: bold;
+   margin-top: 38px;
+   margin-top: 76px;
+ }
+
+ section[data-type="chapter"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="introduction"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="conclusion"] h1[data-hederis-type="hblkchaptitle"],
+ section[data-type="chapter"] > *[data-hederis-type="hblknumber"],
+ section[data-type="introduction"] > *[data-hederis-type="hblknumber"],
+ section[data-type="conclusion"] > *[data-hederis-type="hblknumber"] {
+   text-align: center;
+   font-size: 32px;
+   font-style: normal;
+   line-height: 38px;
+   font-weight: bold;
+   margin-top: 76px;
+   margin-bottom: 76px;
+ }
+
+ section[data-type="chapter"] > *[data-hederis-type="hblknumber"],
+ section[data-type="introduction"] > *[data-hederis-type="hblknumber"],
+ section[data-type="conclusion"] > *[data-hederis-type="hblknumber"] {
+   margin: 0in;
+   padding: 0in;
+ }
+
+ h1[data-hederis-type="hblkchaptitle"] + p[data-hederis-type="hblkpa"],
+ h1[data-hederis-type="hblkchaptitle"] + p[data-hederis-type="hblkp"],
+ *[data-hederis-type="hblknumber"] + p[data-hederis-type="hblkpa"],
+ *[data-hederis-type="hblknumber"] + p[data-hederis-type="hblkp"],
+ h1[data-hederis-type="hblktitle"] + p[data-hederis-type="hblkpa"],
+ h1[data-hederis-type="hblktitle"] + p[data-hederis-type="hblkp"] {
+   text-indent: 0;
+ }
+
+ section[data-hederis-type^="hwprsubsection"] {
+   /*margin: 0 0 $gridheight 0;*/
+ }
+
+ section[data-hederis-type^="hwprsubsection"] > h1[data-hederis-type="hblktitle"] {
+   text-align: left;
+   font-size: 17px;
+   line-height: 19px;
+   font-weight: normal;
+   text-transform: uppercase;
+   margin: 19px 0 19px 0;
+   padding: 0;
+ }
+
+ section[data-hederis-type^="hwprsubsection"] section[data-hederis-type^="hwprsubsection"] > h1[data-hederis-type="hblktitle"] {
+   text-align: left;
+   font-size: 15px;
+   line-height: 19px;
+   font-weight: bold;
+   text-transform: none;
+   margin: 19px 0 19px 0;
+   padding: 0;
+ }
+
+ /* EXTRACTS */
+ div[data-hederis-type^="hwprpoetry"],
+ div[data-hederis-type^="hwprliteral"] {
+   white-space: pre-wrap;
+ }
+
+ div[data-hederis-type^="hwprpoetry"] {
+   margin: 19px 57px 19px 57px; /* MATH */ /* Don't convert to PX */
+ }
+
+ div[data-hederis-type^="hwprliteral"] {
+   font-family: monospace, "FreeMono";
+   margin: 19px 57px 19px 57px; /* MATH */ /* Don't convert to PX */
+ }
+
+ div[data-hederis-type^="hwprpoetry"] p,
+ div[data-hederis-type^="hwprliteral"] p {
+   margin: 0;
+   padding: 0;
+ }
+
+ div[data-hederis-type^="hwprpoetry"] p {
+   margin-right: 19px;
+   text-indent: -19px;
+ }
+
+ div[data-hederis-type^="hwprliteral"] p {
+   font-family: monospace, "FreeMono";
+ }
+
+ /* footnotes */
+
+ span[data-type="footnote"] {
+   text-align: left;
+   font-size: 12px;
+   line-height: 120%;
+   margin-left: 0.25in;
+ }
+
+ span[data-type="footnote"] span.footnote-para {
+   display: block;
+   text-align: left;
+ }
+
+ span[data-type="footnote"] {
+   float: footnote;
+ }
+
+ aside {
+   margin: 19px 38px 38px 38px; /* MATH */ /* Don't convert to PX */
+ }
+
+ aside h1[data-hederis-type="hblktitle"] {
+   font-size: 17px;
+   line-height: 19px;
+   text-align: center;
+   margin: 0 0 19px 0;
+ }
+
+ aside h2[data-hederis-type="hblksubtitle"],
+ p[data-hederis-type="hblkau"],
+ p[data-hederis-type="hblkh1"] {
+   font-size: 12px;
+   text-align: center;
+   margin: 0 0 19px 0;
+ }
+
+ aside p[data-hederis-type="hblktype"] {
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 12px;
+   font-family: 'myriad-pro', 'FreeSans', sans-serif, "FreeSerif";
+ }
+
+ p[data-hederis-type^="hblkpa"] + p[data-hederis-type="hblkh1"],
+ p[data-hederis-type^="hblkp"] + p[data-hederis-type="hblkh1"] {
+   margin-top: 19px;
+ }
+
+ h1 + p,
+ h2 + p,
+ h1 + p[data-hederis-type="hblkpa"],
+ h1 + p[data-hederis-type="hblkp"],
+ h2 + p[data-hederis-type="hblkpa"],
+ h2 + p[data-hederis-type="hblkp"],
+ p[data-hederis-type="hblkau"] + p[data-hederis-type="hblkpa"],
+ p[data-hederis-type="hblkau"] + p[data-hederis-type="hblkp"] {
+   text-indent: 0;
+ }
+
+ aside p {
+   /*font-size: 10pt;*/
+ }
+
+ blockquote {
+   margin: 19px 38px 19px 38px; /* MATH */ /* Don't convert to PX */
+   padding: 0;
+   font-style: italic;
+ }
+
+ blockquote > p:first-child,
+ blockquote > p[data-hederis-type="hblkpa"]:first-child,
+ blockquote > p[data-hederis-type="hblkp"]:first-child {
+   text-indent: 0;
+ }
+
+ blockquote p[data-hederis-type="hblkattribution"] {
+   font-style: normal;
+ }
+
+ p[data-hederis-type="hblkattribution"] {
+   text-align: right;
+   margin-top: 19px;
+ }
+
+ p[data-hederis-type="hblkattributioncont"] {
+   text-align: right;
+   margin-top: 0;
+ }
+
+ p[data-hederis-type="hblkattribution"] + p[data-hederis-type="hblkattribution"] {
+   margin-top: 0;
+ }
+
+ blockquote[data-hederis-type^="hwprletter"] p[data-hederis-type^="hblkdateline"] {
+   text-align: left;
+   margin-top: 19px;
+ }
+
+ blockquote[data-hederis-type^="hwprletter"] p[data-hederis-type^="hblksig"] {
+   text-align: left;
+   margin-top: 19px;
+ }
+
+ blockquote[data-hederis-type^="hwprletter"] p[data-hederis-type^="hblkh1"] {
+   margin-top: 38px;
+ }
+
+ blockquote[data-hederis-type^="hwprletter"] p[data-hederis-type^="hblksalutation"] + p[data-hederis-type^="hblkpa"],
+ blockquote[data-hederis-type^="hwprletter"] p[data-hederis-type^="hblksalutation"] + p[data-hederis-type^="hblkp"] {
+   text-indent: 0;
+   margin-top: 19px;
+ }
+
+ p[data-hederis-type^="hblkclosing"] {
+   margin-top: 19px;
+ }
+
+ p[data-hederis-type^="hblkpostscript"] {
+   margin-top: 19px;
+ }
+
+ blockquote > p:first-child,
+ blockquote > p[data-hederis-type="hblkpa"]:first-child,
+ blockquote > p[data-hederis-type="hblkp"]:first-child {
+   text-align: justify;
+   text-align-last: left;
+ }
+
+ /*p[data-hederis-type="hblkattribution"]:before {
+ }*/
+
+ /* IMAGE */
+
+ figure {
+   text-align: center;
+   margin: 19px auto 19px auto;
+   padding: 0;
+ }
+
+ img {
+   text-align: center;
+   margin: 19px auto 19px auto;
+   padding: 0;
+   display: block;
+   max-width: 100%;
+ }
+
+ figure img {
+   margin: 0 auto 0 auto;
+ }
+
+ p img {
+   display: inline;
+ }
+
+ figure p {
+   text-align: center;
+   font-size: 12px;
+   font-style: italic;
+ }
+
+ figure p em {
+   font-style: normal;
+ }
+
+ figure p + img {
+   margin-top: 19px;
+ }
+
+ figure img + p {
+   margin-top: 19px;
+ }
+
+ img {
+   min-height: 19px;
+ }
+
+ /* fullbleed images inserted at random points within a text
+ are going to cause annoying page-breaking issues, due to the
+ new @page rule being applied (which cancels out any floating
+ or auto-balancing). This will be more easily fixed when we
+ implement paged.js.*/
+ img {
+   min-height: 19px;
+   max-width: 100%;
+ }
+
+ img[data-pi-image-size="fullbleed"] {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 587.52px;
+   overflow: visible;
+   max-width: none;
+ }
+
+ img[data-pi-image-size="fullbleed"] {
+   page-break-before: always;
+   page-break-after: always;
+ }
+
+ /* LISTS */
+
+ ol, ul {
+   padding: 0;
+   margin: 19px 0 19px 38px; /* MATH */ /* Don't convert to PX */
+ }
+
+ ol ol, ul ul, ol ul, ul ol {
+   margin-top: 0;
+   margin-bottom: 0;
+   margin-left: 19px;
+ }
+
+ li {
+   padding: 0;
+   margin: 0;
+ }
+
+ li figure {
+   margin: 0;
+ }
+
+ li p {
+   line-height: 19px;
+ }
+
+ li > ol {
+   list-style-type: lower-alpha;
+ }
+
+ li > ol > li > ol {
+   list-style-type: lower-roman;
+ }
+
+ dt {
+   margin-top: 19px;
+ }
+
+ dd {
+   margin-left: 19px;
+   margin-bottom: 19px;
+ }
+
+ dd p + p {
+   text-indent: 19px;
+ }
+
+ div[data-hederis-type^="hwprtable"] {
+   margin-bottom: 19px;
+ }
+
+ table {
+   padding: 0;
+   border-collapse: collapse;
+ }
+
+ table p {
+   font-size: 0.9em;
+ }
+
+ table tr {
+   padding: 0;
+   margin: 0;
+ }
+
+ table td {
+   padding: 0;
+   margin: 0;
+ }
+
+ div[data-hederis-type^="hwprtable"] p[data-hederis-type="hblkcaption"] {
+   text-align: center;
+   font-size: 12px;
+ }
+
+ section[data-type="bibliography"] p[data-hederis-type="hblkpa"],
+ section[data-type="bibliography"] p[data-hederis-type="hblkp"] {
+   text-indent: -19px;
+   margin-top: 19px;
+   margin-left: 19px;
+ }
+
+ section[data-type="index"] ol {
+   margin-top: 0;
+   margin-left: 19px;
+   padding-left: 0;
+   list-style-type: none;
+ }
+
+ section[data-type="index"] p[data-hederis-type="hblkh1"] {
+   text-align: left;
+   margin-bottom: 0;
+ }
+
+ section[data-type="index"] li p {
+   font-size: 12px;
+   line-height: 15px;
+   text-indent: 0;
+   text-align: left;
+   margin-bottom: 0;
+ }
+
+ section[data-type="index"] {
+   column-count: 2;
+   column-gap: 38px; /* MATH */ /* Don't convert to PX */
+ }
+
+ section[data-type="index"] > h1 {
+   column-span: all;
+ }
+
+ /* SPANS */
+ span.hspanunderline {
+   text-decoration: underline;
+ }
+
+ span.hspansmallcaps {
+   text-transform: uppercase;
+   font-size: 0.9em;
+ }
+
+ sup,
+ sub {
+   vertical-align: baseline;
+   position: relative;
+   top: -0.4em;
+ }
+ sub {
+   top: 0.4em;
+ }
+
+ span.hspantighten {
+   letter-spacing: -0.2pt;
+ }
+
+ span.hspanloosen {
+   letter-spacing: 0.2pt;
+ }
+
+ *[data-pi-format="ebook"] {
+   display: none;
+ }
