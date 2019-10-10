@@ -796,11 +796,11 @@ class AtPage extends Handler {
 			let pageHeightVar = this.createVariable("--pagedjs-height", CSSValueToString(height));
 
 			rules.push(
-				bleedTop,
-				bleedRight,
-				bleedBottom,
-				bleedLeft,
-				bleedTopRecto,
+				bleedTop, 
+				bleedRight, 
+				bleedBottom, 
+				bleedLeft, 
+				bleedTopRecto, 
 				bleedRightRecto,
 				bleedBottomRecto,
 				bleedLeftRecto,
@@ -808,7 +808,7 @@ class AtPage extends Handler {
 				bleedRightVerso,
 				bleedBottomVerso,
 				bleedLeftVerso,
-				pageWidthVar,
+				pageWidthVar, 
 				pageHeightVar
 			);
 		}
