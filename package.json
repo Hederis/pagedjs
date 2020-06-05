@@ -1,6 +1,6 @@
 {
   "name": "@zschwartz/pagedjs",
-  "version": "0.1.34.b",
+  "version": "0.1.34.e",
   "description": "Chunks up a document into paged media flows and applies print styles",
   "author": "Fred Chasen",
   "license": "MIT",
