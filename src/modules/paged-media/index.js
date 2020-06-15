@@ -4,6 +4,8 @@ import PrintMedia from "./print-media";
 import Splits from "./splits";
 import Counters from "./counters";
 import Lists from "./lists";
+import NthOfType from "./nth-of-type";
+import Following from "./following";
 
 export default [
 	AtPage,
@@ -11,5 +13,7 @@ export default [
 	PrintMedia,
 	Splits,
 	Counters,
-	Lists
+	Lists,
+	NthOfType,
+	Following
 ];
